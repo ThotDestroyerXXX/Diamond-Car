@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="login.css" type="text/css" />
+    <title>login</title>
+  </head>
+  <body>
+    <div class="span-content" id="open-span">
+      <p id="close-but" onclick="spanClose()">x</p>
+      <p id="welcome-user"></p>
+      <a href="../Home/home.html"><p>Home</p></a>
+      <a href="../Cars/cars.html"><p>Cars</p></a>
+      <a href="../Showroom/showroom.html"><p>Showroom</p></a>
+      <a href="../AboutUs/about.html"><p>About Us</p></a>
+      <a href="../Login/login.html"><p id="log-but">Login</p></a>
+      <p onclick="logOut()" id="logOut-but-span">log out</p>
+    </div>
+    <header>
+      <div class="cont">
+        <div class="warp">
+          <div class="navbar">
+            <div class="logo">
+              <a href="../Home/home.html"
+                ><img src="../../Assets/logo_DiamondCut.png" alt=""
+              /></a>
+            </div>
+            <div class="pages">
+              <a href="../Home/home.html"><p>Home</p></a>
+              <a href="../Cars/cars.html"><p>Cars</p></a>
+              <a href="../Showroom/showroom.html"><p>Showroom</p></a>
+              <a href="../AboutUs/about.html"><p>About Us</p></a>
+            </div>
+            <div class="login-header">
+              <a href="../Login/login.html"><p id="log-but">Login</p></a>
+              <div id="welcome-yessir">
+                <p id="userName"></p>
+                <p id="welcome-user"></p>
+              </div>
+            </div>
+            <div class="span-yes" onclick="spanOpen()">
+              <span id="span-ham"></span>
+              <span id="span-ham"></span>
+              <span id="span-ham"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="image-login">
+      <img
+        src="../../Assets/loginpage_Image_Background.jpg"
+        alt=""
+        id="image-logins"
+      />
+    </div>
+    <div class="login-wrap">
+      <div class="login-forms">
+        <h1>Login</h1>
+        <form action="../Home/home.html" novalidate id="form-loginhehe">
+          <div class="username-input">
+            <div class="label-span">
+              <label for="Usernameid">Username</label>
+              <span id="namespan"></span>
+            </div>
+
+            <input
+              type="text"
+              name="Username"
+              id="Usernameid"
+              placeholder="Username"
+            />
+          </div>
+          <div class="email-input">
+            <div class="label-span">
+              <label for="Emailid">Email</label>
+              <span id="emailspan"></span>
+            </div>
+
+            <input
+              type="email"
+              name="Email"
+              id="Emailid"
+              placeholder="example@gmail.com"
+            />
+          </div>
+          <div class="phone-input">
+            <div class="label-span">
+              <label for="phoneid">Phone Number</label>
+              <span id="phonespan"></span>
+            </div>
+
+            <input
+              type="tel"
+              name="phone"
+              id="phoneid"
+              placeholder="123456789"
+            />
+          </div>
+          <div class="password-input">
+            <div class="label-span">
+              <label for="passwordid">Password</label>
+              <span id="passwordspan"></span>
+            </div>
+
+            <input
+              type="password"
+              name="password"
+              id="passwordid"
+              placeholder="password"
+            />
+          </div>
+          <div class="confirm-input">
+            <div class="label-span">
+              <label for="confirmid">Confirm Password</label>
+              <span id="confirmpassspan"></span>
+            </div>
+
+            <input
+              type="password"
+              name="confirm"
+              id="confirmid"
+              placeholder="confirm password"
+            />
+          </div>
+          <div class="checkbox-input">
+            <input type="checkbox" name="checkbox" id="checkboxid" />
+            <label for="checkboxid">I agree to the terms and services</label>
+          </div>
+          <button id="signinbut" type="submit">Sign In</button>
+        </form>
+      </div>
+    </div>
+    <script src="login.js"></script>
+  </body>
+</html>

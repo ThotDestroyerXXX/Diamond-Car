@@ -1,0 +1,387 @@
+/* import poppins font*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* import inter font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.pages {
+  display: flex;
+}
+.pages p:hover,
+.login-header p:hover {
+  background-color: white;
+  color: black;
+  border-radius: 100px;
+}
+
+.pages p,
+.login-header p {
+  padding: 0.5rem 1.5rem;
+  transition: 0.2s ease-in-out;
+}
+
+.logo img {
+  width: 70px;
+  height: 70px;
+}
+
+.navbar {
+  margin-top: 1rem;
+  font-family: "Inter";
+  font-weight: 500;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  z-index: 10;
+  align-items: center;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: absolute; /* Stay in place */
+  margin-top: -1.5rem;
+  padding-top: 90px;
+  left: 0;
+  top: 0;
+  width: 100vw; /* Full width */
+  max-width: 100%;
+  height: 100vh; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+
+  z-index: 20;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  border: 0;
+  border-radius: 100px;
+  color: black;
+  width: 10vw;
+  height: auto;
+  position: absolute;
+  align-content: center;
+  padding-left: 2vh;
+  right: 9rem;
+  padding: 1vh 2vh 1vh 2vh;
+  font-size: 20px;
+  z-index: 20;
+}
+
+#userName {
+  display: flex;
+  background-color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 100px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+#logOut-but {
+  cursor: pointer;
+}
+
+#userName img {
+  width: 25px;
+  height: 25px;
+}
+
+#welcome-yessir {
+  display: none;
+  flex-direction: row;
+  cursor: pointer;
+  text-align: center;
+  align-items: center;
+}
+
+#open-span {
+  position: sticky;
+  color: black;
+  background-color: white;
+  top: 0;
+  z-index: 10;
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 20px;
+  width: 100%;
+  height: 100vh;
+  max-height: 100%;
+}
+
+.span-yes {
+  display: none;
+  cursor: pointer;
+}
+
+#close-but {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 40px;
+  font-family: "Inter";
+  font-weight: 800;
+  cursor: pointer;
+}
+
+#logOut-but-span {
+  display: none;
+}
+
+#image-logins {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  object-fit: cover;
+  z-index: -2;
+  top: 0;
+}
+
+.login-wrap {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  color: white;
+  align-items: center;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login-wrap h1 {
+  font-family: "Inter";
+  font-weight: 800;
+  font-size: 2em;
+  text-align: center;
+}
+
+.login-forms {
+  border-radius: 20px;
+  background-color: transparent;
+  backdrop-filter: blur(20px);
+  width: 27rem;
+  height: 34rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-forms form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  align-items: center;
+}
+
+.username-input,
+.email-input,
+.phone-input,
+.password-input,
+.confirm-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+input::placeholder {
+  color: white;
+  font-weight: 200;
+  font-size: 13px;
+}
+
+.checkbox-input {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.login-forms label {
+  font-family: "Poppins";
+  font-size: 15px;
+  font-weight: 500;
+}
+
+#Usernameid,
+#Emailid,
+#phoneid,
+#passwordid,
+#confirmid {
+  width: 20rem;
+  height: 2.2rem;
+  border-radius: 100px;
+  border: 3px solid white;
+  background-color: transparent;
+  color: white;
+  padding-left: 2vh;
+  font-family: "Poppins";
+  font-weight: 400;
+  outline: none;
+}
+
+#checkboxid {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 20px;
+  border: 0;
+  cursor: pointer;
+}
+
+#signinbut {
+  width: 20rem;
+  border-radius: 100px;
+  border: 0;
+  height: 2.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter";
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.label-span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.label-span span {
+  color: rgb(238, 255, 0);
+  font-family: "Poppins";
+  font-size: 12px;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 768px) {
+  #span-ham {
+    display: initial;
+    width: 25px;
+    border-radius: 100px;
+    height: 3px;
+    background-color: white;
+    z-index: 2;
+  }
+
+  .span-yes {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 2;
+    padding-right: 1.5rem;
+  }
+
+  .pages,
+  .login-header {
+    display: none;
+  }
+
+  .logo {
+    margin-left: 1rem;
+  }
+  .navbar {
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .login-forms {
+    width: 20rem;
+    height: 30rem;
+  }
+
+  .login-forms form {
+    gap: 0.7rem;
+  }
+
+  input::placeholder {
+    color: white;
+    font-weight: 200;
+    font-size: 10px;
+  }
+
+  .checkbox-input {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .login-forms label {
+    font-family: "Poppins";
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  #Usernameid,
+  #Emailid,
+  #phoneid,
+  #passwordid,
+  #confirmid {
+    width: 17rem;
+    height: 1.8rem;
+  }
+
+  #checkboxid {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  #signinbut {
+    width: 17rem;
+    border-radius: 100px;
+    border: 0;
+    height: 2.5rem;
+  }
+
+  .label-span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .label-span span {
+    color: rgb(238, 255, 0);
+    font-family: "Poppins";
+    font-size: 10px;
+    font-weight: 300;
+  }
+}

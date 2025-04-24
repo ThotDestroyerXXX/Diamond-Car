@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="cars.css" type="text/css" />
+    <title>Cars</title>
+    <script type="text/javascript" src="cars-resources.js"></script>
+  </head>
+  <body>
+    <div class="span-content" id="open-span">
+      <p id="close-but" onclick="spanClose()">x</p>
+      <p id="welcome-users"></p>
+      <a href="../Home/home.html"><p>Home</p></a>
+      <a href="../Cars/cars.html"><p>Cars</p></a>
+      <a href="../Showroom/showroom.html"><p>Showroom</p></a>
+      <a href="../AboutUs/about.html"><p>About Us</p></a>
+      <a href="../Login/login.html"><p id="log-buts">Login</p></a>
+      <p onclick="logOut()" id="logOut-but-span">log out</p>
+    </div>
+    <header>
+      <div class="cont">
+        <div class="wrap">
+          <div class="navbar">
+            <div class="logo">
+              <a href="../Home/home.html"
+                ><img src="../../Assets/logo_DiamondCut.png" alt=""
+              /></a>
+            </div>
+            <div class="pages">
+              <a href="../Home/home.html"><p>Home</p></a>
+              <a href="../Cars/cars.html"><p>Cars</p></a>
+              <a href="../Showroom/showroom.html"><p>Showroom</p></a>
+              <a href="../AboutUs/about.html"><p>About Us</p></a>
+            </div>
+            <div class="login-header">
+              <a href="../Login/login.html"><p id="log-but">Login</p></a>
+              <div id="welcome-yessir">
+                <p id="userName"></p>
+                <p id="welcome-user"></p>
+              </div>
+            </div>
+            <div class="modal" id="myModal">
+              <div class="modal-content">
+                <p id="user-name"></p>
+                <p onclick="logOut()" id="logOut-but">log out</p>
+              </div>
+            </div>
+            <div class="span-yes" onclick="spanOpen()">
+              <span id="span-ham"></span>
+              <span id="span-ham"></span>
+              <span id="span-ham"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="topcar-cont">
+      <h1>Best Sellers</h1>
+      <div class="topcar-wrap">
+        <div class="car-title" id="title">
+          <img src="../../Assets/logo-bmw.png" alt="" id="car-logo" />
+          <h2 id="car-title-id">BMW Z4 Roadster</h2>
+        </div>
+        <div class="image-class" id="image-id">
+          <div class="back-glow"></div>
+          <img
+            src="../../Assets/carsPage_BMW_Z4_Roadster.png"
+            alt=""
+            id="image-lesgo"
+          />
+        </div>
+        <div class="button-left" onclick="move(0)">
+          <p>&lt</p>
+        </div>
+        <div class="button-right" onclick="move(1)">
+          <p>></p>
+        </div>
+        <div class="price-wrap">
+          <p id="pricetag">Start from Rp 1.773.000.000</p>
+        </div>
+      </div>
+    </div>
+    <div class="list-car-cont">
+      <h1>Find Your Car</h1>
+      <div class="list-car-wrap">
+        <div class="car-filter-cont">
+          <div class="brand-car-class">
+            <h3>Car Brand</h3>
+            <div class="input-label-new" id="new-label-id">
+              <input
+                type="radio"
+                name="radioChoose"
+                id="bmwid"
+                checked="checked"
+                onclick="initialDisplay()"
+              />
+              <p>BMW</p>
+            </div>
+            <div class="input-label-new" id="new-label-id">
+              <input
+                type="radio"
+                name="radioChoose"
+                id="porscheid"
+                onclick="initialDisplay()"
+              />
+              <p>Porsche</p>
+            </div>
+            <div class="input-label-new" id="new-label-id">
+              <input
+                type="radio"
+                name="radioChoose"
+                id="chevroletid"
+                onclick="initialDisplay()"
+              />
+              <p>Chevrolet</p>
+            </div>
+            <div class="input-label-new" id="new-label-id">
+              <input
+                type="radio"
+                name="radioChoose"
+                id="bugattiid"
+                onclick="initialDisplay()"
+              />
+              <p>Bugatti</p>
+            </div>
+            <div class="input-label-new" id="new-label-id">
+              <input
+                type="radio"
+                name="radioChoose"
+                id="mercedesid"
+                onclick="initialDisplay()"
+              />
+              <p>mercedes Benz</p>
+            </div>
+            <div class="input-label-new" id="new-label-id">
+              <input
+                type="radio"
+                name="radioChoose"
+                id="lexusid"
+                onclick="initialDisplay()"
+              />
+              <p>Lexus</p>
+            </div>
+            <div class="input-label-new" id="new-label-id">
+              <input
+                type="radio"
+                name="radioChoose"
+                id="audiid"
+                onclick="initialDisplay()"
+              />
+              <p>Audi</p>
+            </div>
+            <div class="input-label-used" id="used-label-id">
+              <input
+                type="radio"
+                name="radioChoose"
+                id="teslaid"
+                onclick="initialDisplay()"
+              />
+              <p>Tesla</p>
+            </div>
+            <div class="input-label-used" id="used-label-id">
+              <input
+                type="radio"
+                name="radioChoose"
+                id="bentleyid"
+                onclick="initialDisplay()"
+              />
+              <p>Bentley</p>
+            </div>
+            <div class="input-label-used" id="used-label-id">
+              <input
+                type="radio"
+                name="radioChoose"
+                id="ferrariid"
+                onclick="initialDisplay()"
+              />
+              <p>Ferrari</p>
+            </div>
+          </div>
+          <div class="type-car-class">
+            <h3>Car Type</h3>
+            <div class="input-label">
+              <input
+                type="radio"
+                name="carSelect"
+                id="newcarid"
+                checked="checked"
+                onclick="usedNew()"
+              />
+              <p>new Car</p>
+            </div>
+            <div class="input-label">
+              <input
+                type="radio"
+                name="carSelect"
+                id="usedcarid"
+                onclick="usedNew()"
+              />
+              <p>Used Car</p>
+            </div>
+          </div>
+        </div>
+        <div class="cars-cont" id="cont-cars"></div>
+      </div>
+    </div>
+    <div class="carBrand-cont">
+      <h1>Car Brands Working with Us</h1>
+      <div class="carBrand-wrap">
+        <div class="car-brands">
+          <img src="../../Assets/logo-audi.png" alt="" />
+          <img src="../../Assets/logo-bentley.png" alt="" />
+          <img src="../../Assets/logo-bmw.png" alt="" />
+          <img src="../../Assets/logo-bugatti.png" alt="" />
+          <img src="../../Assets/logo-chevrolet.png" alt="" />
+          <img src="../../Assets/logo-ferrari.png" alt="" />
+          <img src="../../Assets/logo-lexus.png" alt="" />
+          <img src="../../Assets/logo-mercedes.png" alt="" />
+          <img src="../../Assets/logo-porsche.webp" alt="" />
+          <img src="../../Assets/logo-tesla.png" alt="" />
+        </div>
+        <div class="car-brands">
+          <img src="../../Assets/logo-audi.png" alt="" />
+          <img src="../../Assets/logo-bentley.png" alt="" />
+          <img src="../../Assets/logo-bmw.png" alt="" />
+          <img src="../../Assets/logo-bugatti.png" alt="" />
+          <img src="../../Assets/logo-chevrolet.png" alt="" />
+          <img src="../../Assets/logo-ferrari.png" alt="" />
+          <img src="../../Assets/logo-lexus.png" alt="" />
+          <img src="../../Assets/logo-mercedes.png" alt="" />
+          <img src="../../Assets/logo-porsche.webp" alt="" />
+          <img src="../../Assets/logo-tesla.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-cont">
+        <div class="footer-wrap">
+          <div class="footer-title">
+            <h3 id="title-diamond">DiamondCut</h3>
+          </div>
+          <div class="email-input-footer">
+            <input
+              type="email"
+              name="emailinp"
+              id="email-text-inp"
+              placeholder="example@gmail.com"
+            />
+            <button>Submit</button>
+          </div>
+          <div class="social-media-img-cont">
+            <div
+              class="cont-text-img"
+              onclick="window.open('https\:\/\/instagram.com', '_blank')"
+            >
+              <div class="social-img">
+                <img src="../../Assets/footer_Image_Instagram.png" alt="" />
+              </div>
+              <p>@Diamond_Cut</p>
+            </div>
+            <div
+              class="cont-text-img"
+              onclick="window.open('https\:\/\/youtube.com', '_blank')"
+            >
+              <div class="social-img">
+                <img src="../../Assets/footer_Image_Youtube.webp" alt="" />
+              </div>
+              <p>Diamond Cut Motors</p>
+            </div>
+
+            <div
+              class="cont-text-img"
+              onclick="window.open('https\:\/\/facebook.com', '_blank')"
+            >
+              <div class="social-img">
+                <img src="../../Assets/footer_Image_Facebook.png" alt="" />
+              </div>
+              <p>Diamond_Cut</p>
+            </div>
+          </div>
+          <div class="page-footer">
+            <a href="../Home/home.html"
+              ><p>Home</p>
+              <div id="underline-hover"></div
+            ></a>
+            <a href="../Cars/cars.html"
+              ><p>Cars</p>
+              <div id="underline-hover"></div
+            ></a>
+            <a href="../Showroom/showroom.html"
+              ><p>Showroom</p>
+              <div id="underline-hover"></div
+            ></a>
+            <a href="../AboutUs/about.html"
+              ><p>About Us</p>
+              <div id="underline-hover"></div
+            ></a>
+          </div>
+          <div class="copyright-cont">
+            <p>&copy Copyright All Rights Reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="cars.js"></script>
+  </body>
+</html>

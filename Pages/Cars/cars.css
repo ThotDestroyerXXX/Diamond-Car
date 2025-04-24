@@ -1,0 +1,865 @@
+/* import poppins font*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* import inter font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input:focus {
+  outline: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.pages {
+  display: flex;
+}
+.pages p,
+.login-header p {
+  padding: 0.5rem 1.5rem;
+  transition: 0.2s ease-in-out;
+}
+
+.pages p:hover,
+.login-header p:hover {
+  background-color: white;
+  color: black;
+  border-radius: 100px;
+}
+
+.logo img {
+  width: 70px;
+  height: 70px;
+}
+
+.navbar {
+  margin-top: 1rem;
+  font-family: "Inter";
+  font-weight: 500;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  z-index: 10;
+  align-items: center;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: absolute; /* Stay in place */
+  margin-top: -1.5rem;
+  padding-top: 90px;
+  left: 0;
+  top: 0;
+  width: 100vw; /* Full width */
+  max-width: 100%;
+  height: 100vh; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+
+  z-index: 20;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  border: 0;
+  border-radius: 100px;
+  color: black;
+  width: 10vw;
+  height: auto;
+  position: absolute;
+  align-content: center;
+  padding-left: 2vh;
+  right: 9rem;
+  padding: 1vh 2vh 1vh 2vh;
+  font-size: 20px;
+  z-index: 20;
+}
+
+#userName {
+  display: flex;
+  background-color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 100px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+#logOut-but {
+  cursor: pointer;
+}
+
+#userName img {
+  width: 25px;
+  height: 25px;
+}
+
+#welcome-yessir {
+  display: none;
+  flex-direction: row;
+  cursor: pointer;
+  text-align: center;
+  align-items: center;
+}
+
+#open-span {
+  position: sticky;
+  color: black;
+  background-color: white;
+  top: 0;
+  z-index: 10;
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 20px;
+  width: 100%;
+  height: 100vh;
+}
+
+.span-yes {
+  display: none;
+}
+
+#close-but {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 40px;
+  font-family: "Inter";
+  font-weight: 800;
+  cursor: pointer;
+}
+
+#logOut-but-span {
+  display: none;
+}
+
+.topcar-cont {
+  margin: 0;
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: black;
+  overflow: hidden;
+}
+
+.topcar-cont h1 {
+  font-family: "Inter";
+  font-size: 40px;
+  font-weight: 700;
+  color: white;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  top: 12vh;
+}
+
+.topcar-wrap {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  /* background-color: red; */
+  width: 100%;
+  height: 70vh;
+  transform: translate(0, -35%);
+}
+
+p {
+  font-family: "Poppins";
+}
+
+#title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -5vh;
+}
+
+#title img {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+}
+
+#title h2 {
+  color: white;
+  display: flex;
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 35px;
+  justify-content: center;
+  padding-top: 2vh;
+}
+
+.image-class {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* background-color: red; */
+  width: 60vw;
+  height: 45vh;
+}
+
+.back-glow {
+  background-color: white;
+  filter: blur(70px);
+  width: 60vw;
+  height: 50vh;
+  max-height: 50vh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  z-index: -1;
+}
+
+.image-class img {
+  width: 50vw;
+  object-fit: cover;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.button-left,
+.button-right {
+  color: white;
+  font-size: 30px;
+  font-family: "Inter";
+  font-weight: 500;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+
+  width: 3rem;
+  height: 3rem;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.button-left:hover,
+.button-right:hover {
+  background-color: white;
+  color: black;
+  transition: 0.3s ease-in-out;
+}
+
+.button-left {
+  left: 5vh;
+}
+
+.button-right {
+  right: 5vh;
+}
+
+.price-wrap {
+  color: white;
+  display: flex;
+  position: absolute;
+  top: 90%;
+  width: 100%;
+  justify-content: center;
+}
+
+.price-wrap p {
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 300;
+}
+
+@keyframes moveLeft {
+  0% {
+    left: 50%;
+  }
+  100% {
+    left: -50vw;
+  }
+}
+
+@keyframes moveLeft2 {
+  0% {
+    left: 150vw;
+  }
+  100% {
+    left: 50%;
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    left: 50%;
+  }
+  100% {
+    left: 150vw;
+  }
+}
+
+@keyframes moveRight2 {
+  0% {
+    left: -50vw;
+  }
+  100% {
+    left: 50%;
+  }
+}
+
+@keyframes removeOpacity {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes addOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.list-car-cont h1 {
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  background-color: white;
+  font-family: "Inter";
+  font-weight: 800;
+  font-size: 40px;
+  padding: 4vh 0;
+}
+
+.list-car-wrap {
+  background-color: #f4f4f4;
+  height: auto;
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+.brand-car-class,
+.type-car-class {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-label,
+.input-label-new,
+.input-label-used {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.input-label-new input,
+.input-label-used input,
+.input-label input {
+  accent-color: black;
+}
+
+.car-filter-cont {
+  display: flex;
+  flex-direction: row;
+  width: 30rem;
+  padding-left: 10vh;
+  gap: 5vw;
+}
+
+.cars-cont {
+  width: 70vw;
+  /* background-color: red; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+  justify-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.car-card {
+  width: 20rem;
+  height: 25rem;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 0 0 6px 1px rgb(143, 143, 143);
+  transition: all 0.2s ease-in-out;
+}
+
+.car-card:hover {
+  box-shadow: 0 0 6px 3px rgb(143, 143, 143);
+}
+
+.car-filter-cont h3 {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.car-filter-cont p {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.car-filter-cont input {
+  width: 1rem;
+}
+
+#image-car {
+  width: 100%;
+  height: 45%;
+  object-fit: cover;
+  padding-top: 2vh;
+}
+
+#image-camaro {
+  width: 100%;
+  height: 40%;
+  object-fit: cover;
+  padding-top: 5vh;
+  object-position: 0 -6vh;
+}
+
+.car-card h3 {
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.fuel-p {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 15px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+}
+
+.hr-car-card {
+  height: 2px;
+  background-color: black;
+  width: 85%;
+  margin: 0 auto;
+}
+.person-steer-fuel-cont {
+  width: 85%;
+  height: 5vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.person-cont,
+.steer-cont,
+.fuel-cont {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 0;
+  gap: 6px;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+}
+
+.person-steer-fuel-cont p {
+  font-size: 15px;
+  font-weight: 400;
+}
+.person-steer-fuel-cont img {
+  width: 22px;
+  height: 22px;
+  object-fit: cover;
+}
+
+.vr-person-steer-fuel {
+  width: 2px;
+  height: 70%;
+  align-items: center;
+  align-content: center;
+  margin: auto 8px;
+  background-color: black;
+}
+
+.car-spec {
+  font-size: 12px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+#image-logo {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  object-position: 0 50%;
+}
+
+#image-bugatti {
+  width: 30px;
+  height: auto;
+  object-fit: cover;
+}
+
+.logo-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-top: 5px;
+}
+
+.carBrand-cont {
+  width: 100vw;
+  max-width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 5vh;
+  text-align: center;
+  gap: 5rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.carBrand-cont h1 {
+  font-family: "Inter";
+  color: black;
+  font-weight: 800;
+  font-size: 40px;
+}
+
+.car-brands {
+  display: flex;
+  flex-direction: row;
+  gap: 6rem;
+  animation: slide 15s linear infinite;
+}
+
+.car-brands img {
+  width: 12rem;
+  height: 12rem;
+  object-fit: cover;
+}
+
+.carBrand-wrap {
+  gap: 6rem;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.carBrand-wrap:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15vw;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+  content: "";
+  z-index: 2;
+}
+.carBrand-wrap::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15vw;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+  content: "";
+  z-index: 2;
+}
+
+.footer-cont {
+  width: 100vw;
+  max-width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  padding: 1rem 0 0 0;
+}
+
+.footer-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-title {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+#title-diamond {
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.email-input-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.email-input-footer input {
+  width: 25rem;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  padding-left: 1rem;
+  border: 0;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Poppins";
+}
+
+.email-input-footer input::placeholder {
+  font-size: 12px;
+  font-weight: 500;
+  font-family: "Poppins";
+}
+
+.email-input-footer button {
+  font-family: "Poppins";
+  font-size: 15px;
+  font-weight: 600;
+  width: 5rem;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  transition: 0.2s all ease-in-out;
+  cursor: pointer;
+}
+
+.email-input-footer button:hover {
+  background-color: white;
+  color: black;
+}
+
+.email-input-footer input,
+.email-input-footer button {
+  height: 2.5rem;
+  left: 0.5rem;
+}
+
+.social-media-img-cont {
+  display: flex;
+  flex-direction: row;
+  gap: 9rem;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+.social-img {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  align-items: center;
+  border-radius: 100px;
+}
+.cont-text-img {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Poppins";
+  font-size: 14px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.social-img img {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.page-footer {
+  /* background-color: white; */
+  display: flex;
+  flex-direction: row;
+  gap: 10rem;
+  justify-content: center;
+  font-family: "Poppins";
+  font-size: 15px;
+  font-weight: 500;
+  background-color: #1b1b1b;
+  height: 5rem;
+  align-items: center;
+}
+
+#underline-hover {
+  width: 0;
+  height: 0;
+  background-color: white;
+  margin: 0 auto;
+  transition: all 0.1s ease-in-out;
+}
+
+.page-footer a:hover #underline-hover {
+  width: 30px;
+  height: 2px;
+  background-color: white;
+  margin: 0 auto;
+}
+
+.copyright-cont {
+  width: 100%;
+  background-color: #262626;
+  height: 3rem;
+  text-align: center;
+  align-content: center;
+  font-size: 13px;
+  font-family: "Poppins";
+  font-weight: 400;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 6rem));
+  }
+}
+
+@media screen and (max-width: 1121px) {
+  .list-car-wrap {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .car-filter-cont {
+    padding-left: 0;
+    justify-content: center;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #span-ham {
+    display: initial;
+    width: 25px;
+    border-radius: 100px;
+    height: 3px;
+    background-color: white;
+    z-index: 2;
+  }
+
+  .span-yes {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 2;
+    padding-right: 1.5rem;
+    cursor: pointer;
+  }
+
+  .pages,
+  .login-header {
+    display: none;
+  }
+  .logo {
+    margin-left: 1rem;
+  }
+
+  .navbar {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .page-footer {
+    gap: 4rem;
+  }
+  .social-media-img-cont {
+    gap: 4rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .carBrand-cont h1 {
+    font-size: 30px;
+  }
+  .topcar-cont h1 {
+    font-size: 30px;
+  }
+  #title h2 {
+    font-size: 25px;
+  }
+  .price-wrap p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .page-footer {
+    gap: 2rem;
+  }
+  .social-media-img-cont {
+    gap: 2rem;
+  }
+  .email-input-footer {
+    padding: 0 2rem;
+  }
+  .email-input-footer input {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .carBrand-cont h1 {
+    font-size: 22px;
+  }
+  .page-footer {
+    gap: 2rem;
+  }
+  .cont-text-img {
+    font-size: 10px;
+  }
+}

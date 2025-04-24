@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="about.css" type="text/css" />
+    <title>About Us</title>
+  </head>
+  <body>
+    <div class="span-content" id="open-span">
+      <p id="close-but" onclick="spanClose()">x</p>
+      <p id="welcome-users"></p>
+      <a href="../Home/home.html"><p>Home</p></a>
+      <a href="../Cars/cars.html"><p>Cars</p></a>
+      <a href="../Showroom/showroom.html"><p>Showroom</p></a>
+      <a href="../AboutUs/about.html"><p>About Us</p></a>
+      <a href="../Login/login.html"><p id="log-buts">Login</p></a>
+      <p onclick="logOut()" id="logOut-but-span">log out</p>
+    </div>
+    <header>
+      <div class="cont">
+        <div class="wrap">
+          <div class="navbar">
+            <div class="logo">
+              <a href="../Home/home.html"
+                ><img src="../../Assets/logo_DiamondCut.png" alt=""
+              /></a>
+            </div>
+            <div class="pages">
+              <a href="../Home/home.html"><p>Home</p></a>
+              <a href="../Cars/cars.html"><p>Cars</p></a>
+              <a href="../Showroom/showroom.html"><p>Showroom</p></a>
+              <a href="../AboutUs/about.html"><p>About Us</p></a>
+            </div>
+            <div class="login-header">
+              <a href="../Login/login.html"><p id="log-but">Login</p></a>
+              <div id="welcome-yessir">
+                <p id="userName"></p>
+                <p id="welcome-user"></p>
+              </div>
+            </div>
+            <div class="modal" id="myModal">
+              <div class="modal-content">
+                <p id="user-name"></p>
+                <p onclick="logOut()" id="logOut-but">log out</p>
+              </div>
+            </div>
+            <div class="span-yes" onclick="spanOpen()">
+              <span id="span-ham"></span>
+              <span id="span-ham"></span>
+              <span id="span-ham"></span>
+            </div>
+          </div>
+          <div class="video-about">
+            <video autoplay muted id="video-id-about">
+              <source src="../../Assets/aboutUs_Video_Header.mp4" />
+            </video>
+            <img
+              src="../../Assets/aboutUs_Image_Header.webp"
+              alt=""
+              id="image-id-about"
+            />
+            <div class="title-tagline">
+              <h1 id="diamond-title">About Us</h1>
+              <h1 id="company-tagline">Where Quality Meets Performace</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="good-thing-cont">
+      <div class="good-thing-wrap">
+        <div class="years-title-desc">
+          <h1>10+ Years</h1>
+          <p>Outstanding performance in reselling market</p>
+        </div>
+        <div class="vertical-line"></div>
+        <div class="quality-logo-text">
+          <div class="quality-logo-wrap">
+            <img
+              src="../../Assets/aboutUs_Quality_Icon.png"
+              alt=""
+              id="quality-logo"
+            />
+          </div>
+          <p>Best quality for premium cars</p>
+        </div>
+        <div class="vertical-line"></div>
+        <div class="amount-title-text">
+          <h1>20+ Cars</h1>
+          <p>Premium Style and luxurious cars worth buying</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="transition-cont">
+      <div class="transition-wrap">
+        <img
+          src="../../Assets/aboutUs_Image_Transition.jpg"
+          alt=""
+          id="transition-image"
+        />
+        <div class="black-background"></div>
+      </div>
+    </div>
+
+    <div class="vision-mission-cont">
+      <div class="vision-mission-wrap">
+        <div class="aiming-best-text-wrap">
+          <h1>Aiming for The Best</h1>
+          <p>
+            DiamondCut offers the best car quality you can buy—Making sure our
+            customers get what they want. We aim to be the best car reseller in
+            the world with cars of premium quality and maintaining good
+            relationship with our customers.
+          </p>
+        </div>
+        <div class="title-image-vission-mission-wrap">
+          <h1>Vision and Mission</h1>
+          <img
+            src="../../Assets/aboutUs_Vision_Image.jpg"
+            alt=""
+            id="visionimg"
+          />
+          <img
+            src="../../Assets/aboutUs_Mission_Image.webp"
+            alt=""
+            id="missionimg"
+          />
+          <div class="vission-mission-wrap">
+            <div class="state" id="vision1" onclick="visionChange()">
+              <h2>Vision</h2>
+              <div class="horizontal-line" id="horizontal1"></div>
+              <p>
+                Lead car reseller marketplace, elevating the car buying and
+                selling experience through Quality, Technology, and Exceptional
+                customer Service.
+              </p>
+            </div>
+            <div class="state" id="mission1" onclick="missionChange()">
+              <h2>Mission</h2>
+              <div class="horizontal-line" id="horizontal2"></div>
+              <p>
+                Provide a trustworthy platform for buying and selling cars,
+                offering the best quality vehicles, and deliver unparalleled
+                customer support.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="history-cont">
+      <h1>Our History</h1>
+      <div class="history-wrap" id="history-wrap-id">
+        <div id="lt-id" onclick="changeDisplay(0)">
+          <img src="../../Assets/arrow_left_right.png" alt="" />
+        </div>
+        <div id="mt-id" onclick="changeDisplay(1)">
+          <img src="../../Assets/arrow_left_right.png" alt="" id="rotated" />
+        </div>
+      </div>
+
+      <div class="history-detail" id="history-ids">
+        <h2 id="h2-history"></h2>
+        <p id="p-history"></p>
+      </div>
+    </div>
+
+    <div class="social-about">
+      <h1>Our Social Media</h1>
+      <div class="social-media-img-cont">
+        <div class="cont-text-img">
+          <div class="social-img">
+            <img src="../../Assets/footer_Image_Instagram.png" alt="" />
+          </div>
+          <p>@Diamond_Cut</p>
+        </div>
+        <div class="cont-text-img">
+          <div class="social-img">
+            <img src="../../Assets/footer_Image_Youtube.webp" alt="" />
+          </div>
+          <p>Diamond Cut Motors</p>
+        </div>
+
+        <div class="cont-text-img">
+          <div class="social-img">
+            <img src="../../Assets/footer_Image_Facebook.png" alt="" />
+          </div>
+          <p>Diamond_Cut</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-cont">
+        <div class="footer-wrap">
+          <div class="footer-title">
+            <h3 id="title-diamond">DiamondCut</h3>
+          </div>
+          <div class="email-input-footer">
+            <input
+              type="email"
+              name="emailinp"
+              id="email-text-inp"
+              placeholder="example@gmail.com"
+            />
+            <button>Submit</button>
+          </div>
+          <div class="social-media-img-cont">
+            <div
+              class="cont-text-img"
+              onclick="window.open('https\:\/\/instagram.com', '_blank')"
+            >
+              <div class="social-img">
+                <img src="../../Assets/footer_Image_Instagram.png" alt="" />
+              </div>
+              <p>@Diamond_Cut</p>
+            </div>
+            <div
+              class="cont-text-img"
+              onclick="window.open('https\:\/\/youtube.com', '_blank')"
+            >
+              <div class="social-img">
+                <img src="../../Assets/footer_Image_Youtube.webp" alt="" />
+              </div>
+              <p>Diamond Cut Motors</p>
+            </div>
+
+            <div
+              class="cont-text-img"
+              onclick="window.open('https\:\/\/facebook.com', '_blank')"
+            >
+              <div class="social-img">
+                <img src="../../Assets/footer_Image_Facebook.png" alt="" />
+              </div>
+              <p>Diamond_Cut</p>
+            </div>
+          </div>
+          <div class="page-footer">
+            <a href="../Home/home.html"
+              ><p>Home</p>
+              <div id="underline-hover"></div
+            ></a>
+            <a href="../Cars/cars.html"
+              ><p>Cars</p>
+              <div id="underline-hover"></div
+            ></a>
+            <a href="../Showroom/showroom.html"
+              ><p>Showroom</p>
+              <div id="underline-hover"></div
+            ></a>
+            <a href="../AboutUs/about.html"
+              ><p>About Us</p>
+              <div id="underline-hover"></div
+            ></a>
+          </div>
+          <div class="copyright-cont">
+            <p>&copy Copyright All Rights Reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="about.js"></script>
+</html>

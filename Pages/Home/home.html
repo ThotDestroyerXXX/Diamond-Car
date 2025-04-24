@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="home.css" type="text/css" />
+    <title>DiamondCut</title>
+  </head>
+  <body>
+    <div class="span-content" id="open-span">
+      <p id="close-but" onclick="spanClose()">x</p>
+      <p id="welcome-users"></p>
+      <a href="../Home/home.html"><p>Home</p></a>
+      <a href="../Cars/cars.html"><p>Cars</p></a>
+      <a href="../Showroom/showroom.html"><p>Showroom</p></a>
+      <a href="../AboutUs/about.html"><p>About Us</p></a>
+      <a href="../Login/login.html"><p id="log-buts">Login</p></a>
+      <p onclick="logOut()" id="logOut-but-span">log out</p>
+    </div>
+    <header>
+      <div class="cont">
+        <div class="wrap">
+          <div class="navbar">
+            <div class="logo">
+              <a href="../Home/home.html"
+                ><img src="../../Assets/logo_DiamondCut.png" alt=""
+              /></a>
+            </div>
+            <div class="pages">
+              <a href="../Home/home.html"><p>Home</p></a>
+              <a href="../Cars/cars.html"><p>Cars</p></a>
+              <a href="../Showroom/showroom.html"><p>Showroom</p></a>
+              <a href="../AboutUs/about.html"><p>About Us</p></a>
+            </div>
+            <div class="login-header">
+              <a href="../Login/login.html"><p id="log-but">Login</p></a>
+              <div id="welcome-yessir">
+                <p id="userName"></p>
+                <p id="welcome-user"></p>
+              </div>
+            </div>
+            <div class="modal" id="myModal">
+              <div class="modal-content">
+                <p id="user-name"></p>
+                <p onclick="logOut()" id="logOut-but">log out</p>
+              </div>
+            </div>
+            <div class="span-yes" onclick="spanOpen()">
+              <span id="span-ham"></span>
+              <span id="span-ham"></span>
+              <span id="span-ham"></span>
+            </div>
+          </div>
+
+          <div class="video-main">
+            <video autoplay muted loop id="video-id-main">
+              <source src="../../Assets/HomePage_CarVideoHeader.mp4" />
+            </video>
+            <div class="title-tagline">
+              <div class="title-yessir">
+                <h1 id="diamond-title">DiamondCut Motors</h1>
+                <h1 id="company-tagline">WHERE QUALITY MEETS PERFORMANCE</h1>
+              </div>
+
+              <div class="span-and-subheading">
+                <span id="span-subheading"></span>
+                <h3 id="subheading-text">
+                  The best car showroom you could ever see
+                </h3>
+              </div>
+              <div class="button-about-discover">
+                <a href="../AboutUs/about.html">
+                  <div class="button-about" id="about-click">
+                    <p>About Us</p>
+                    <img
+                      src="../../Assets/HomePage_AboutUs_Icon_NotHovering.png"
+                      alt="icon"
+                      id="image-header-nothover"
+                    />
+                    <img
+                      src="../../Assets/HomePage_AboutUs_Icon_Hovering.png"
+                      alt="icon"
+                      id="image-header-hover"
+                    />
+                  </div>
+                </a>
+                <a href="../Cars/cars.html">
+                  <div class="button-discover" id="discover-click">
+                    <p>Discover</p>
+                    <img
+                      src="../../Assets/HomePage_Discover_Icon_NotHovering.png"
+                      alt="icon"
+                      id="image-header-nothover"
+                    />
+                    <img
+                      src="../../Assets/HomePage_Discover_Icon_Hovering.png"
+                      alt="icon"
+                      id="image-header-hover"
+                    />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="top-tier-cars-cont">
+      <div class="top-tier-cars-wrap">
+        <h1>Top Tier Cars</h1>
+        <div class="top-tier-cont" id="top-yessir"></div>
+      </div>
+    </div>
+
+    <div class="featured-cont" id="featured-yessir"></div>
+    <footer>
+      <div class="footer-cont">
+        <div class="footer-wrap">
+          <div class="footer-title">
+            <h3 id="title-diamond">DiamondCut</h3>
+          </div>
+          <div class="email-input-footer">
+            <input
+              type="email"
+              name="emailinp"
+              id="email-text-inp"
+              placeholder="example@gmail.com"
+            />
+            <button>Submit</button>
+          </div>
+          <div class="social-media-img-cont">
+            <div
+              class="cont-text-img"
+              onclick="window.open('https\:\/\/instagram.com', '_blank')"
+            >
+              <div class="social-img">
+                <img src="../../Assets/footer_Image_Instagram.png" alt="" />
+              </div>
+              <p>@Diamond_Cut</p>
+            </div>
+            <div
+              class="cont-text-img"
+              onclick="window.open('https\:\/\/youtube.com', '_blank')"
+            >
+              <div class="social-img">
+                <img src="../../Assets/footer_Image_Youtube.webp" alt="" />
+              </div>
+              <p>Diamond Cut Motors</p>
+            </div>
+
+            <div
+              class="cont-text-img"
+              onclick="window.open('https\:\/\/facebook.com', '_blank')"
+            >
+              <div class="social-img">
+                <img src="../../Assets/footer_Image_Facebook.png" alt="" />
+              </div>
+              <p>Diamond_Cut</p>
+            </div>
+          </div>
+          <div class="page-footer">
+            <a href="../Home/home.html"
+              ><p>Home</p>
+              <div id="underline-hover"></div
+            ></a>
+            <a href="../Cars/cars.html"
+              ><p>Cars</p>
+              <div id="underline-hover"></div
+            ></a>
+            <a href="../Showroom/showroom.html"
+              ><p>Showroom</p>
+              <div id="underline-hover"></div
+            ></a>
+            <a href="../AboutUs/about.html"
+              ><p>About Us</p>
+              <div id="underline-hover"></div
+            ></a>
+          </div>
+          <div class="copyright-cont">
+            <p>&copy Copyright All Rights Reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="home.js"></script>
+  </body>
+</html>

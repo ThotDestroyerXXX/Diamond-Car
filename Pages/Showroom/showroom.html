@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="showroom.css" type="text/css" />
+    <title>Our Showroom</title>
+  </head>
+  <body>
+    <div class="span-content" id="open-span">
+      <p id="close-but" onclick="spanClose()">x</p>
+      <p id="welcome-users"></p>
+      <a href="../Home/home.html"><p>Home</p></a>
+      <a href="../Cars/cars.html"><p>Cars</p></a>
+      <a href="../Showroom/showroom.html"><p>Showroom</p></a>
+      <a href="../AboutUs/about.html"><p>About Us</p></a>
+      <a href="../Login/login.html"><p id="log-buts">Login</p></a>
+      <p onclick="logOut()" id="logOut-but-span">log out</p>
+    </div>
+    <header>
+      <div class="cont">
+        <div class="wrap">
+          <div class="navbar">
+            <div class="logo">
+              <a href="../Home/home.html"
+                ><img src="../../Assets/logo_DiamondCut.png" alt=""
+              /></a>
+            </div>
+            <div class="pages">
+              <a href="../Home/home.html"><p>Home</p></a>
+              <a href="../Cars/cars.html"><p>Cars</p></a>
+              <a href="../Showroom/showroom.html"><p>Showroom</p></a>
+              <a href="../AboutUs/about.html"><p>About Us</p></a>
+            </div>
+            <div class="login-header">
+              <a href="../Login/login.html"><p id="log-but">Login</p></a>
+              <div id="welcome-yessir">
+                <p id="userName"></p>
+                <p id="welcome-user"></p>
+              </div>
+            </div>
+            <div class="modal" id="myModal">
+              <div class="modal-content">
+                <p id="user-name"></p>
+                <p onclick="logOut()" id="logOut-but">log out</p>
+              </div>
+            </div>
+            <div class="span-yes" onclick="spanOpen()">
+              <span id="span-ham"></span>
+              <span id="span-ham"></span>
+              <span id="span-ham"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="jumbotron-cont">
+      <img
+        src="../../Assets/showroom_Jumbotron_Image.avif"
+        alt=""
+        id="jumbotron-image"
+      />
+      <div class="showroom-title-wrap">
+        <h1>Our Showroom</h1>
+        <p>Take a tour on Our Showroom</p>
+      </div>
+    </div>
+    <div class="showroom-carousel">
+      <div class="image-slider" id="autoSliderImg">
+        <div class="image-good">
+          <img src="../../Assets/showroom_Carousel1_Image.jpg" />
+        </div>
+        <div class="image-good">
+          <img src="../../Assets/showroom_Carousel2_Image.jpg" />
+        </div>
+        <div class="image-good">
+          <img src="../../Assets/showroom_Carousel3_Image.jpg" />
+        </div>
+        <div class="image-good">
+          <img src="../../Assets/showroom_Carousel4_Image.jpg" />
+        </div>
+        <div class="image-good">
+          <img src="../../Assets/showroom_Carousel5_Image.webp" />
+        </div>
+      </div>
+      <div class="text-wrap">
+        <h2>The Best Car Reseller to Find</h2>
+        <p>
+          Visit our showroom for immersive experience and discover the
+          unbeatable combination of quality, value, and exceptional service.
+          Each car in our inventory undergoes a rigorous inspection process to
+          ensure it meets our high standards, giving you peace of mind with
+          every purchase. Visit us today and experience the difference of a
+          car-buying experience that prioritizes your satisfaction above all
+          else.
+        </p>
+      </div>
+    </div>
+
+    <div class="gallery_cont">
+      <h1>Our Gallery</h1>
+      <div class="gallery-wrap">
+        <img src="../../Assets/showroom_Gallery_Image1.jpeg" alt="" />
+        <img src="../../Assets/showroom_Gallery_Image2.jpg" alt="" />
+        <img src="../../Assets/showroom_Gallery_Image3.jpg" alt="" />
+        <img src="../../Assets/showroom_Gallery_Image4.jpeg" alt="" />
+        <img src="../../Assets/showroom_Gallery_Image5.jpeg" alt="" />
+        <img src="../../Assets/showroom_Carousel1_Image.jpg" alt="" />
+        <img src="../../Assets/showroom_Carousel2_Image.jpg" alt="" />
+        <img src="../../Assets/showroom_Carousel3_Image.jpg" alt="" />
+        <img src="../../Assets/showroom_Carousel4_Image.jpg" alt="" />
+        <img src="../../Assets/showroom_Carousel5_Image.webp" alt="" />
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-cont">
+        <div class="footer-wrap">
+          <div class="footer-title">
+            <h3 id="title-diamond">DiamondCut</h3>
+          </div>
+          <div class="email-input-footer">
+            <input
+              type="email"
+              name="emailinp"
+              id="email-text-inp"
+              placeholder="example@gmail.com"
+            />
+            <button>Submit</button>
+          </div>
+          <div class="social-media-img-cont">
+            <div
+              class="cont-text-img"
+              onclick="window.open('https\:\/\/instagram.com', '_blank')"
+            >
+              <div class="social-img">
+                <img src="../../Assets/footer_Image_Instagram.png" alt="" />
+              </div>
+              <p>@Diamond_Cut</p>
+            </div>
+            <div
+              class="cont-text-img"
+              onclick="window.open('https\:\/\/youtube.com', '_blank')"
+            >
+              <div class="social-img">
+                <img src="../../Assets/footer_Image_Youtube.webp" alt="" />
+              </div>
+              <p>Diamond Cut Motors</p>
+            </div>
+
+            <div
+              class="cont-text-img"
+              onclick="window.open('https\:\/\/facebook.com', '_blank')"
+            >
+              <div class="social-img">
+                <img src="../../Assets/footer_Image_Facebook.png" alt="" />
+              </div>
+              <p>Diamond_Cut</p>
+            </div>
+          </div>
+          <div class="page-footer">
+            <a href="../Home/home.html"
+              ><p>Home</p>
+              <div id="underline-hover"></div
+            ></a>
+            <a href="../Cars/cars.html"
+              ><p>Cars</p>
+              <div id="underline-hover"></div
+            ></a>
+            <a href="../Showroom/showroom.html"
+              ><p>Showroom</p>
+              <div id="underline-hover"></div
+            ></a>
+            <a href="../AboutUs/about.html"
+              ><p>About Us</p>
+              <div id="underline-hover"></div
+            ></a>
+          </div>
+          <div class="copyright-cont">
+            <p>&copy Copyright All Rights Reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="showroom.js"></script>
+  </body>
+</html>
